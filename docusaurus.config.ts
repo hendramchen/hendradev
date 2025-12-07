@@ -9,6 +9,16 @@ const config: Config = {
   tagline: "Learn coding everywhere! Build amazing things.",
   favicon: "img/favicon.ico",
 
+  headTags: [
+    {
+      tagName: "meta",
+      attributes: {
+        name: "algolia-site-verification",
+        content: "22EC6D7DF360C179",
+      },
+    },
+  ],
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
