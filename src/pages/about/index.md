@@ -1,5 +1,5 @@
 ---
-slug: about-me
+slug: about
 title: About me
 ---
 
