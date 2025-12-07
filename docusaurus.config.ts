@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import "dotenv/config";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -13,8 +14,8 @@ const config: Config = {
     {
       tagName: "meta",
       attributes: {
-        name: "algolia-site-verification",
-        content: "22EC6D7DF360C179",
+        name: process.env.ALGOLIA_META_NAME,
+        content: process.env.ALGOLIA_META_CONTENT,
       },
     },
   ],
@@ -155,12 +156,12 @@ const config: Config = {
     },
     algolia: {
       // The application ID provided by Algolia
-      appId: "TFTKQQCZ5P",
+      appId: process.env.ALGOLIA_APP_ID,
 
       // Public API key: it is safe to commit it
-      apiKey: "31bf2fd896ca18e8619fd2e57bb27a2a",
+      apiKey: process.env.ALGOLIA_API_KEY,
 
-      indexName: "Hendradev Website",
+      indexName: process.env.ALGOLIA_INDEX_NAME,
 
       // Optional: see doc section below
       contextualSearch: true,
