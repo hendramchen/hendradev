@@ -118,19 +118,19 @@ const config: Config = {
           ],
         },
         {
-          title: "Community",
+          title: "Social Media",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "LinkedIn",
+              href: "https://linkedin.com/in/hendramchen",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              label: "Instagram",
+              href: "https://instagram.com/hendramchen",
             },
             {
               label: "X",
-              href: "https://x.com/docusaurus",
+              href: "https://x.com/hendramchen",
             },
           ],
         },
@@ -143,7 +143,7 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/hendramchen/hendradev",
+              href: "https://github.com/hendramchen",
             },
           ],
         },
