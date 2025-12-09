@@ -100,4 +100,94 @@ Mengenal Git merupakan keterampilan dasar yang dibutuhkan dalam pengembangan per
 
 ## Git Concepts Overview
 
-description
+Sebelum menulis perintah Git pertama Anda, Anda perlu memahami beberapa konsep inti:
+
+### 1. Repositori (Repo)
+
+Repositori adalah folder yang dilacak oleh Git.\
+Repositori berisi:
+
+- Berkas proyek Anda
+- Seluruh riwayat perubahan
+- Metadata yang disimpan di .git/
+
+Anda dapat membuatnya dengan:
+
+```
+git init
+```
+
+atau dengan clone repositori yang ada:
+
+```
+git clone <url>
+```
+
+### 2. Commit
+
+Commit adalah snapshot file Anda pada titik waktu tertentu. Setiap komitmen harus mewakili unit perubahan yang bermakna.
+
+```
+git commit -m "Add user login API"
+```
+
+Sebuah commit terdapat:
+
+- Author
+- Timestamp
+- Changes
+- Hash (ID unik)
+
+### Branch (cabang)
+
+Cabang adalah penunjuk yang dapat dipindahkan ke serangkaian commit.
+
+branch umum:
+
+- `main` (atau `master`) — baris stabil utama
+- feature branch — cabang fitur
+- bugfix branch — cabang perbaikan bug
+
+Buat branch baru:
+
+```
+git branch feature/homepage
+atau
+git switch feature/homepage
+atau
+git checkout -b feature/homepage
+```
+
+### 4. Remote
+
+Remote adalah repositori yang dihosting di tempat lain (misalnya, GitHub).
+
+Nama umum remote: `origin`
+
+Anda push dan pull perubahan ke/dari remote:
+
+```
+// mengirim perubahan ke remote
+git push origin main
+// menerima perubahan dari remote
+git pull origin main
+```
+
+### 5. Staging Area
+
+Area staging adalah ruang perantara antara direktori kerja dan commit Anda.
+
+Alur kerja (_workflow_):
+
+1. Ubah files
+2. File stage → git add
+3. Commit → git commit
+
+Contoh:
+
+```
+git add index.js
+git commit -m "Fix login redirect bug"
+```
+
+Ini memberi Anda kendali penuh atas apa yang menjadi bagian dari komitmen Anda berikutnya.
