@@ -2,11 +2,11 @@
 sidebar_position: 1
 ---
 
-# Pengantar Git
+# Introduction to Git
 
 Git adalah _version control system_ (VCS) yang paling banyak digunakan dalam pengembangan perangkat lunak modern. Hampir setiap tim perangkat lunak, perusahaan rintisan kecil, komunitas _open-source_, perusahaan besar, menggunakan Git untuk melacak perubahan, berkolaborasi, dan memelihara _codebase_ mereka.
 
-## Apa itu Git?
+## What is Git?
 
 Git adalah sistem kendali versi terdistribusi yang diciptakan pada tahun 2005 oleh Linus Torvalds, pencipta Linux.
 Awalnya dirancang untuk mengelola kode sumber kernel Linux yang masif dan cepat.

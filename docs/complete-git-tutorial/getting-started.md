@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Memulai dengan Git
+# Getting Started
 
 Sebelum mulai melacak atau melakukan komit kode, Anda perlu menginstal Git, mengonfigurasi identitas Anda, dan memahami cara membuat atau mengkloning repositori. Bagian ini akan memandu Anda langkah demi langkah.
 
