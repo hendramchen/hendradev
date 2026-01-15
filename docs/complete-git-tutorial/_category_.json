@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Complete Git Tutorial (structured for a step-by-step Tutorial section)"
+    "description": "Before you write a single line of application code, you need a way to manage it. Git is more than just a tool; it is the industry-standard version control system that allows you to track changes, collaborate with teams, and \"time travel\" back to previous versions of your project if something goes wrong."
   }
 }
