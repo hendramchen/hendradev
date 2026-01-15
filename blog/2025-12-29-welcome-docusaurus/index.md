@@ -5,25 +5,26 @@ authors: [hendra]
 tags: [docusaurus]
 ---
 
+![Docusaurus Banner](./docusaurus-plushie-banner.jpeg)
+
 # Why I Swapped "Building from Scratch" for Docusaurus
 
 In the developer community, we often have a "Not Invented Here" syndrome. We feel that to truly own our personal brand, we need to build our websites from the ground up—hand-coding every div, managing our own routing, and sweating over the perfect dark mode implementation.
 
 But lately, I’ve shifted my philosophy. For my blog and documentation, I’ve moved to Docusaurus. Here is why I believe it’s the superior choice over a "from scratch" React or Next.js build.
 
+<!-- truncate -->
+
 ## 1. Speed to Production (Easy to Use & Deploy)
 
 Building from scratch means you are the architect, the plumber, and the decorator. You have to handle:
 
 - Route management.
-
 - Theme switching (Dark/Light mode).
-
 - Mobile responsiveness.
-
 - Asset optimization.
 
-With Docusaurus, you get a "Fast Track" to deployment. It’s a specialized static site generator (SSG) that comes with these features out of the box. You can go from npx create-docusaurus@latest to a live site on Vercel, Netlify, or GitHub Pages in under 10 minutes.
+With Docusaurus, you get a "Fast Track" to deployment. It’s a specialized static site generator (SSG) that comes with these features out of the box. You can go from `npx create-docusaurus@latest` to a live site on Vercel, Netlify, or GitHub Pages in under 10 minutes.
 
 ## 2. The Power of MDX: Markdown with "Superpowers"
 
@@ -56,3 +57,9 @@ SEO by Default: It generates static HTML for every route, ensuring your blog pos
 When you build from scratch, adding a search bar is a project in itself. You have to index your content, manage a search engine, and build the UI.
 
 In Docusaurus, adding world-class search is as simple as a configuration change. The Algolia DocSearch plugin is the gold standard for technical sites. Once configured, you have a lightning-fast, keyboard-accessible search bar that "just works."
+
+## Final Thoughts
+
+Building from scratch is great for learning, but Docusaurus is for shipping. As a developer, I want my time spent on writing high-quality content and building cool React components, not debugging the "Active" state of a sidebar link for the 10th time.
+
+If you want a site that is professional, accessible, and incredibly easy to maintain, Docusaurus is the way to go.
