@@ -4,70 +4,70 @@ sidebar_position: 1
 
 # Introduction to Git
 
-Git adalah _version control system_ (VCS) yang paling banyak digunakan dalam pengembangan perangkat lunak modern. Hampir setiap tim perangkat lunak, perusahaan rintisan kecil, komunitas _open-source_, perusahaan besar, menggunakan Git untuk melacak perubahan, berkolaborasi, dan memelihara _codebase_ mereka.
+Git is the most widely used version control system (VCS) in modern software development. Almost every software team—small startups, open-source communities, large enterprises—uses Git to track changes, collaborate, and maintain clean, reliable codebases.
 
-## What is Git?
+## What is Git? (History & Purpose)
 
-Git adalah sistem kendali versi terdistribusi yang diciptakan pada tahun 2005 oleh Linus Torvalds, pencipta Linux.
-Awalnya dirancang untuk mengelola kode sumber kernel Linux yang masif dan cepat.
+Git is a distributed version control system created in 2005 by Linus Torvalds, the creator of Linux.
+It was originally designed to manage the massive and fast-moving source code of the Linux kernel.
 
-Tujuan Git sejak awal adalah:
+The original purpose of Git was to:
 
-- **Kecepatan**\
-  Git harus menangani repositori besar dengan cepat.
-- **Arsitektur Terdistribusi**\
-  Setiap pengembang memiliki salinan lengkap riwayat proyek di mesin mereka.
-- **Dukungan Kuat untuk Percabangan & Penggabungan**\
-  Pengembang harus dapat bereksperimen dengan bebas tanpa mengganggu orang lain.
-- **Integritas Data**\
-  Git menggunakan hash SHA-1 / SHA-256 untuk melindungi integritas semua data.
+- **Speed**\
+  Git should handle large repositories quickly.
+- **Distributed Architecture**\
+  Each developer should have a complete copy of the project history on their machine.
+- **Strong Support for Branching & Merging**\
+  Developers should be able to experiment freely without disturbing others.
+- **Data Integrity**\
+  Git uses SHA-1 / SHA-256 hashes to protect the integrity of all data.
 
-Git menjadi populer karena memecahkan masalah kolaborasi di dunia nyata dan dapat diskalakan dari pengembang tunggal hingga tim global.
+Git became popular because it solves real-world collaboration problems and scales from solo developers to global teams.
 
-## Git vs VCS Lainnya (SVN, Mercurial) - Perbedaan Dasar
+## Git vs Other VCS (SVN, Mercurial) — Short Comparison
 
-| Fitur                   | Git (Distributed)                                            | SVN (Centralized)                | Mercurial (Distributed)                 |
-| ----------------------- | ------------------------------------------------------------ | -------------------------------- | --------------------------------------- |
-| Repository Type         | Fully distributed — setiap pengguna memiliki salinan lengkap | Centralized — repo utama tunggal | Distributed                             |
-| Speed                   | Sangat cepat (terutama percabangan, penggabungan)            | Lebih lambat                     | Cepat tetapi tidak diadopsi secara luas |
-| Branching (Percabangan) | Murah & Mudah                                                | Berat & kompleks                 | Mudah                                   |
-| Kepopuleran             | Sangat tinggi (standar industri)                             | Kurang                           | Sedang                                  |
-| Kerjaan Offline         | Ya, riwayat lengkap tersedia                                 | Sangat terbatas                  | Ya                                      |
-| Learning Curve          | Sedang                                                       | Mudah                            | Mudah                                   |
+| Feature         | Git (Distributed)                             | SVN (Centralized)              | Mercurial (Distributed)        |
+| --------------- | --------------------------------------------- | ------------------------------ | ------------------------------ |
+| Repository Type | Fully distributed — each user has a full copy | Centralized — single main repo | Distributed                    |
+| Speed           | Very fast (especially branching, merging)     | Slower                         | Fast but not as widely adopted |
+| Branching       | Cheap & Easy                                  | Heavy & complex                | Easy                           |
+| Popularity      | Very high (industry standard)                 | Low                            | Medium                         |
+| Offline Work    | Yes, full history available                   | Very limited                   | Yes                            |
+| Learning Curve  | Medium                                        | Easy                           | Easy                           |
 
-**Sederhananya:**\
-Git adalah yang paling canggih dan fleksibel, tetapi mungkin terasa rumit pada awalnya.
-SVN lebih sederhana tetapi terbatas.
-Mecurial mirip dengan Git tetapi kurang umum digunakan saat ini.
+**In simple terms:**\
+Git is the most powerful and flexible, but can feel complex at first.
+SVN is simpler but limited.
+Mercurial is similar to Git but less commonly used today.
 
-## Mengapa Menggunakan Git? (Manfaat)
+## Why Use Git? (Benefits)
 
-Berikut adalah alasan utama mengapa sebagian besar pengembang dan perusahaan memilih Git:
+Here are the main reasons why most developers and companies choose Git:
 
-### 1. Kolaborasi
+### 1. Collaboration
 
-Banyak orang dapat bekerja pada basis kode yang sama tanpa saling menimpa pekerjaan.
+Multiple people can work on the same codebase without overwriting each other’s work.
 
-### 2. Melacak Setiap Perubahan
+### 2. Tracking Every Change
 
-Setiap perubahan disimpan sebagai sebuah komitmen. Anda dapat:
+Every change is stored as a commit. You can:
 
-- Melihat siapa yang mengubah apa
-- Mengembalikan kesalahan
-- Membandingkan versi
-- Memulihkan kode yang dihapus
+- See who changed what
+- Revert mistakes
+- Compare versions
+- Restore deleted code
 
-### 3. Terdistribusi & Offline
+### 3. Distributed & Offline
 
-Semuanya—termasuk riwayat lengkap—disimpan secara lokal, sehingga Anda dapat:
+Everything—including full history—is stored locally, so you can:
 
-- Berkomitmen secara offline
-- Membuat cabang secara offline
-- Menjelajahi riwayat tanpa koneksi internet
+- Commit offline
+- Create branches offline
+- Explore history without an internet connection
 
-### 4. Eksperimen yang Aman (Percabangan)
+### 4. Safe Experimentation (Branching)
 
-Membuat cabang tanpa mengganggu proyek utama:
+Create branches without breaking the main project:
 
 ```
 feature/login
@@ -75,49 +75,49 @@ feature/payment
 bugfix/incorrect-total
 ```
 
-Percabangan di Git sangat ringan.
+Branching in Git is extremely lightweight.
 
-### 5. Performa Luar Biasa
+### 5. Great Performance
 
-Git dioptimalkan untuk kecepatan:
+Git is optimized for speed:
 
-- Commit cepat
-- Diff cepat
-- Merging cepat
-- Cloning dan fetching (pengambilan) cepat
+- Fast commits
+- Fast diff
+- Fast merging
+- Fast cloning and fetching
 
-### 6. Standar Industri
+### 6. Industry Standard
 
-Git digunakan di mana-mana:
+Git is used everywhere:
 
 - GitHub
 - GitLab
 - Bitbucket
 - Azure DevOps
-- Proyek _open-source_
+- Open-source projects
 
-Mengenal Git merupakan keterampilan dasar yang dibutuhkan dalam pengembangan perangkat lunak modern.
+Knowing Git is a required foundational skill in modern software development.
 
 ## Git Concepts Overview
 
-Sebelum menulis perintah Git pertama Anda, Anda perlu memahami beberapa konsep inti:
+Before writing your first Git command, you should understand a few core concepts:
 
-### 1. Repositori (Repo)
+### 1. Repository (Repo)
 
-Repositori adalah folder yang dilacak oleh Git.\
-Repositori berisi:
+A repository is a folder tracked by Git.
+It contains:
 
-- Berkas proyek Anda
-- Seluruh riwayat perubahan
-- Metadata yang disimpan di .git/
+- Your project files
+- The entire history of changes
+- Metadata stored in `.git/`
 
-Anda dapat membuatnya dengan:
+You create one with:
 
 ```
 git init
 ```
 
-atau dengan clone repositori yang ada:
+or clone an existing one:
 
 ```
 git clone <url>
@@ -125,69 +125,70 @@ git clone <url>
 
 ### 2. Commit
 
-Commit adalah snapshot file Anda pada titik waktu tertentu. Setiap komitmen harus mewakili unit perubahan yang bermakna.
+A **commit** is a snapshot of your files at a specific point in time.
+Every commit should represent a meaningful unit of change.
+
+Example:
 
 ```
 git commit -m "Add user login API"
 ```
 
-Sebuah commit terdapat:
+A commit includes:
 
 - Author
 - Timestamp
 - Changes
-- Hash (ID unik)
+- Unique hash (ID)
 
-### Branch (cabang)
+### Branch
 
-Cabang adalah penunjuk yang dapat dipindahkan ke serangkaian commit.
+A **branch** is a movable pointer to a series of commits.
 
-branch umum:
+Common branches:
 
-- `main` (atau `master`) — baris stabil utama
-- feature branch — cabang fitur
-- bugfix branch — cabang perbaikan bug
+- `main` (or `master`) — primary stable line
+- feature branches
+- bugfix branches
 
-Buat branch baru:
+Create a new branch:
 
 ```
 git branch feature/homepage
-atau
+// or
 git switch feature/homepage
-atau
+// or
 git checkout -b feature/homepage
 ```
 
 ### 4. Remote
 
-Remote adalah repositori yang dihosting di tempat lain (misalnya, GitHub).
+A **remote** is a repository hosted elsewhere (e.g., GitHub, GitLab, Bitbucket).
 
-Nama umum remote: `origin`
+Common remote name: `origin`
 
-Anda push dan pull perubahan ke/dari remote:
+Push and pull changes to/from a remote:
 
 ```
-// mengirim perubahan ke remote
 git push origin main
-// menerima perubahan dari remote
 git pull origin main
 ```
 
 ### 5. Staging Area
 
-Area staging adalah ruang perantara antara direktori kerja dan commit Anda.
+The staging area is an intermediate space between your working directory and your commit.
 
-Alur kerja (_workflow_):
+Workflow:
 
-1. Ubah files
-2. File stage → git add
-3. Commit → git commit
+1. Modify files
+2. Stage files → `git add`
+3. Commit → `git commit`
 
-Contoh:
+Example:
 
 ```
 git add index.js
 git commit -m "Fix login redirect bug"
 ```
 
-Ini memberi Anda kendali penuh atas apa yang menjadi bagian dari komitmen Anda berikutnya.
+This gives you full control over what becomes part of your next commit.
