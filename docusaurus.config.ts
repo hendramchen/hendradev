@@ -6,7 +6,7 @@ import "dotenv/config";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "hendradev",
+  title: "Master Web Development",
   tagline: "Learn coding everywhere! Build amazing things.",
   favicon: "img/favicon.ico",
 
